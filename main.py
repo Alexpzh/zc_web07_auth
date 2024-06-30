@@ -6,3 +6,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///example.db' # Эта стро
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False # Эта строчка отключает сигнализацию об изменении объектов внутри базы данных
 db = SQLAlchemy(app) # Создание объекта, через который мы будем работать с базой данных
 
+from app import app
+
+if __name__ == '__main__':
+    app.run(debug=True)
